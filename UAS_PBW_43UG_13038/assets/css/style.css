@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins&display=swap");
+
+:root {
+  --main-color: #444444;
+  --second-color: #959595;
+  --thrird-color: #972c2c;
+  --body-color: #ffffff;
+  --last-color: #d2bcbc;
+  --krona-font: "Krona One", sans-serif;
+  --poppins-font: "Poppins", sans-serif;
+}
+
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/*Navigasi bar*/
+nav {
+  flex: 1;
+  text-align: right;
+  display: flex;
+  position: sticky;
+  overflow: hidden;
+  justify-content: space-between;
+  background-color: var(--last-color);
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+nav img {
+  padding-left: 50px;
+}
+
+nav li {
+  display: inline;
+  list-style-type: none;
+  font-family: var(--poppins-font);
+  padding: 15px;
+}
+
+nav li a {
+  color: var(--main-color);
+  padding: 25px;
+}
+
+nav li:hover {
+  background: var(--thrird-color);
+}
+
+/*Home*/
+.home {
+  display: flex;
+  width: 100%;
+  min-height: 50vh;
+  background: var(--thrird-color);
+  overflow: hidden;
+}
+
+.text-box .gallery-box {
+  flex-basis: 50%;
+  overflow: hidden;
+}
+
+.gallery-box {
+  margin-bottom: -1%;
+  width: 40%;
+}
+
+.text-box {
+  padding: 8% 5%;
+}
+
+.text-box h1 {
+  margin-top: 10%;
+  font-family: var(--krona-font);
+  color: var(--body-color);
+  font-size: 52px;
+  line-height: 80px;
+}
+
+.text-box p{
+  font-family: var(--poppins-font);
+  color: var(--last-color);
+  font-size: 25px;
+}
+
+/*About*/
+.about p {
+  font-family: var(--krona-font);
+  color: var(--thrird-color);
+  font-size: 23px;
+  padding: 150px 100px 0px 100px;
+  text-align: center;
+}
+
+.about h2 {
+  font-family: var(--krona-font);
+  color: var(--main-color);
+  font-size: 32px;
+  padding: 20px 100px 170px 100px;
+  text-align: center;
+}
+
+/*Gallery*/
+.gallery {
+  background-color: var(--thrird-color);
+  padding: 50px 5px 45px 5px;
+}
+
+.gallery p {
+  font-family: var(--krona-font);
+  color: var(--body-color);
+  font-size: 35px;
+  text-align: center;
+  padding: 0px 135px 0px 135px;
+}
+
+.img-gallery {
+  width: 80%;
+  margin: 100px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.img-gallery img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.img-gallery img:hover {
+  transform: scale(0.8) rotate(-15deg);
+  border-radius: 20px;
+  box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+}
+
+.full-img {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.full-img img {
+  width: 90%;
+  max-width: 500px;
+}
+
+.full-img span {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 30px;
+  color: var(--body-color);
+  cursor: pointer;
+  font-family: var(--poppins-font);
+}
+
+.gallery h3 {
+  font-family: var(--poppins-font);
+  color: var(--body-color);
+  font-size: 22px;
+  text-align: center;
+  padding: 0px 135px 0px 135px;
+}
+
+/*Reservation*/
+.reservation {
+  display: flex;
+  width: 100%;
+  min-height: 50vh;
+  background: var(--last-color);
+  overflow: hidden;
+}
+
+.col-1 .col-2 {
+  flex-basis: 50%;
+  overflow: hidden;
+}
+
+.col-2 img {
+  width: 100%;
+  margin-bottom: -1%;
+}
+
+.col-1 {
+  padding: 8% 5%;
+}
+
+.col-1 h1 {
+  margin-top: 10%;
+  font-family: var(--krona-font);
+  color: var(--main-color);
+  font-size: 50px;
+  line-height: 80px;
+}
+
+.btn {
+  display: inline;
+  padding: 15px 40px;
+  margin-right: 20px;
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: var(--thrird-color);
+  color: var(--body-color);
+  font-size: 15px;
+  cursor: pointer;
+  font-family: var(--poppins-font);
+  text-align: center;
+  align-self: stretch;
+}
+
+.btn a {
+  color: var(--body-color);
+}
+
+/*Form Reservation*/
+.container {
+  background-color: #fafafa;
+  margin: 200px;
+  box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 40% 60%;
+  font-family: var(--poppins-font);
+}
+
+.container-waktu {
+  background-color: var(--thrird-color);
+  padding: 40px;
+  outline: 3px dashed #fabc99;
+  outline-offset: -30px;
+  text-align: center;
+}
+
+.container-waktu p {
+  color: var(--body-color);
+}
+
+.container-waktu h4 {
+  color: #fabc99;
+}
+
+.heading {
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+.heading-hari {
+  color: #fabc99;
+  font-size: 30px;
+}
+
+.heading-phone {
+  font-size: 20px;
+}
+
+.container-form {
+  padding: 20px 0;
+  margin: 0 auto;
+  color: var(--main-color);
+}
+
+form {
+  display: grid;
+  grid-row-gap: 20px;
+}
+form p {
+  font-weight: 600;
+}
+.form-field {
+  display: flex;
+  justify-content: space-between;
+}
+
+input,
+select {
+  padding: 10px 15px;
+}
+
+.btn {
+  background-color: var(--thrird-color);
+  color: var(--body-color);
+  padding: 10px 20px;
+  border: none;
+  font-size: 18px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  box-shadow: 7px 10px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
+  box-shadow: 10px 12px 15px rgba(0, 0, 0, 0.3);
+}
+
+/*Popup Form Reservation*/
+.popup {
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 10px;
+  margin-top: -15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--thrird-color);
+  color: var(--body-color);
+}
+
+/*Contact*/
+.contact table {
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact table img {
+  padding: 0px 20px 0px 20px;
+}
+
+.contact table h4 {
+  font-family: var(--poppins-font);
+  color: var(--main-color);
+  font-size: 20px;
+}
+
+.contact table h5 {
+  font-family: var(--poppins-font);
+  color: var(--main-color);
+  font-size: 20px;
+  margin-top: 0;
+}
+
+/*Copyright*/
+.copyright {
+  margin-top: 10%;
+  background-color: var(--last-color);
+  padding: 0px 0px 1px 0px;
+}
+
+.copyright p {
+  padding: 20px 0px 0px 0px;
+  text-align: center;
+  font-family: var(--poppins-font);
+  color: var(--main-color);
+}
